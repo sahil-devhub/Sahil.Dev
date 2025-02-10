@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfollio.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Sahil.Dev</title>
+</head>
+<body>
+    <script src="portfollio.js"></script>
+    <div class="header">
+    <div class="nav">
+        <h1 id="portfollio">myPortfolio</h1>
+
+        <!-- Hamburger Menu for Mobile -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav class="navvar">
+            <a href="#" class="header_hyper">Home</a>
+            <a href="#" class="header_hyper" name="about_button">About</a>
+            <a href="#" class="header_hyper" name="skill_button">Skills</a>
+            <a href="#" class="header_hyper" name="project_button">Projects</a>
+            <a href="#" class="header_hyper" name="achievement_button">Certifications</a>
+            <a href="#" class="header_hyper" name="contact_button">Contact</a>
+        </nav>
+    </div>
+    <br>
+    <hr id="break">
+</div>
+
+
+    <!-- alligning of paragraph for intro  -->
+    <div class="front_view">
+        <div class="intro">
+            <div class="print"></div>
+                <div>
+                    <p class="paragraph">
+                        <b style="font-size: 60px;">Welcome to my </b><i style="font-size: 80px; color: #fc0707;">Portfollio</i>
+                        <br>
+                        <br>
+                        Hi, I'm <b style="font-size: 60px; color: green;">Sahil</b>
+                        <br>
+                        AI/ML & Front-end Developer
+                        <br>
+                        <button id="know_more" onclick="about()">Know more</button>
+                    </p>
+                </div>
+            </div>
+        
+       <br><br><br>
+        <hr id="break">
+    </div>
+    <br><br><br>
+    <hr id="break">
+
+    <!-- About section -->
+    <div id="about">
+        <h1 class="about_heading"><i>About Me</i></h1>    
+        <div class="me">
+            <div id="myself">
+                <br>
+                <i class="section_title">Profile:</i>
+                <p>
+                    B.Tech (AI/ML) student at <a href="https://maqsudan.ctgroup.in/home" class="highlight_link">C.T. Group of Institutions</a> with hands-on experience in Python, AI/ML, and Web Development. Passionate about problem-solving, building AI-driven solutions, and UI/UX design. Certified by IBM Cloud, Google Cloud, and Hoping Minds with internship experience in AI/ML and web development.
+                </p>
+                <br>
+                <i class="section_title">Study:</i> <a href="https://maqsudan.ctgroup.in/home" class="highlight_link">C.T. Group of Institution (CTIEMT)</a>
+                <br><br>
+                <i class="section_title">Github:</i> <a href="https://github.com/sahil-devhub?tab=repositories" class="highlight_link">My GitHub Repositories</a>
+                <br><br>
+                <i class="section_title">LinkedIn:</i> <a href="https://www.linkedin.com/in/sahil-kumar-33298a292/" class="highlight_link">My LinkedIn Profile</a>
+                <br><br>
+                <i class="section_title">Gmail:</i> <a class="highlight_text">sk3458162@gmail.com</a>
+            </div>
+            <div class="about_print"></div>   
+        </div>
+        <br>
+        <button id="skills_button" onclick="skills_button()">Skills</button>
+        <br><br> 
+        <hr id="break">
+    </div>
+    <br><br>
+
+
+    <!-- Experience and Internship -->
+    <div id="intern">
+        <br><br><br>
+        <hr id="break">
+        <br>
+        <h1 class="intern_heading"><i>Work Experience & Internships</i></h1>
+        
+        <ul class="intern_list">
+            <li>AI/ML Intern | Hoping Minds</li>
+            <li>Machine Learning Intern | Cognifyz Technology</li>
+            <li>Web Development & UI/UX Intern | CodSoft</li>
+            <li>WatsonAI Chatbot | IBM Cloud</li>
+            <li>Google Cloud Acade</li>
+        </ul>
+        <br>
+        <hr id="break">
+        <br><br>
+    </div>
+
+    
+<!-- Skills Section -->
+<div id="skills">
+    <hr id="break">
+    <br>
+    <h1 class="skills_heading"><i>- Skills -</i></h1>
+    <div class="all_skills">
+        <div class="boxes">
+            <!-- Technical Skills -->
+            <div class="box1">
+                <h2 class="skill_title">Technical Skills</h2>
+                <hr>
+                <ul class="skill_list">
+                    <li>Artificial Intelligence</li>
+                    <li>Python</li>
+                    <li>Problem Solving</li>
+                    <li>UI/UX</li>
+                    <li>Front-end Development</li>
+                    <li>Excel</li>
+                </ul>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="box2">
+                <h2 class="skill_title">Soft Skills</h2>
+                <hr>
+                <ul class="skill_list">
+                    <li>Presentation Skills</li>
+                    <li>Communication Skills</li>
+                    <li>Problem Visualization</li>
+                    <li>Calmness</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr id="break">
+</div>    
+
+
+<!-- project section -->
+<div class="project" id="project">
+    <br><br>
+    <hr id="break"> 
+    <br>
+    <div class="myproject"><i>My Projects</i></div>
+    <br>
+    <div class="project_container">
+        <ul class="project_hyper">
+            <ul class="achievement-list">
+                <a href="https://github.com/sahil-devhub?tab=repositories" style="text-decoration: none; color: white;"><li><div class="achievement_box animate" style="background-color: #ffb703;"><p>Jarvis - Virtual AI</p></div></li></a>
+                <a href="https://web-chat.global.assistant.watson.appdomain.cloud/preview.html?backgroundImageURL=https%3A%2F%2Fjp-tok.assistant.watson.cloud.ibm.com%2Fpublic%2Fimages%2Fupx-b7c54d68-cffe-421a-8467-899346f8cb2b%3A%3A4c9eff11-0296-4eac-a797-71c5846903be&integrationID=700bdafd-076b-4081-abe9-261ecc9df3a9&region=jp-tok&serviceInstanceID=b7c54d68-cffe-421a-8467-899346f8cb2b" style="text-decoration: none; color: white;"><li><div class="achievement_box animate" style="background-color: #d62828;"><p>Watson AI Chatbot</p></div></li></a>
+                <a href="https://github.com/sahil-devhub/Image-Classification" style="text-decoration: none; color: white;"><li><div class="achievement_box animate" style="background-color: #8ecae6;"><p>Image Classification</p></div></li></a>
+                <a href="https://github.com/sahil-devhub/Salary-prediction" style="text-decoration: none; color: white;"><li><div class="achievement_box animate" style="background-color: #023047;"><p>Salary Prediction</p></div></li></a>
+                <a href="https://github.com/sahil-devhub/Restaurent-Rating-Prediction.git" style="text-decoration: none; color: white;"><li><div class="achievement_box animate" style="background-color: #ff7b00;"><p>Restaurants Rating Prediction</p></div></li></a>
+                <a href="https://github.com/sahil-devhub/Lung-cancer-prediction" style="text-decoration: none; color: white;"><li><div class="achievement_box animate" style="background-color: #06d6a0;"><p>Lung Cancer Prediction</p></div></li></a>
+            </ul>
+        </ul>
+    </div>
+    <br><br>
+    <hr id="break"> 
+    <br><br>
+</div>
+
+<!-- Certifications & Courses Section -->
+<div class="certifications" id="certifications">
+    <br>
+    <hr class="section-divider"> 
+    <div class="certifications-heading">Certifications & Courses</div>
+    <br>
+    <ul class="certifications-list">
+        <li><div class="certification-card"><div class="certification-content"><p>AI/ML Internship - Hoping Minds</p></div></div></li>
+        <li><div class="certification-card"><div class="certification-content"><p>ISO Certification - CodSoft & Cofnifyz Technology</p></div></div></li>
+        <li><div class="certification-card"><div class="certification-content"><p>Watson AI Chatbot - IBM Cloud</p></div></div></li>
+        <li><div class="certification-card"><div class="certification-content"><p>Python Certification - GUVI</p></div></div></li>
+        <li><div class="certification-card"><div class="certification-content"><p>AI Development - Simplilearn</p></div></div></li>
+        <li><div class="certification-card"><div class="certification-content"><p>Flipkart GRiD 6.0 - Flipkart</p></div></div></li>
+
+    </ul>
+    <br><br>
+    <hr class="section-divider"> 
+    <br>
+</div>
+
+<!-- Contact Section -->
+<div class="contact">
+    <br><br><br>
+    <hr id="break"> 
+    <br>
+    <div class="mycontact">Contact</div>
+    <br>
+    <div class="contact_box">
+        <form onsubmit="sendEmail(event)">
+            <br><br>
+            <p><b>Name:</b> 
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </p>
+            <br>
+            <p><b>Email:</b> 
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </p>
+            <br>
+            <p><b>Contact:</b> 
+                <input type="number" id="contact" placeholder="Enter your contact number">
+            </p>
+            <br>
+            <p><b>Message:</b></p>
+            <textarea id="message" cols="35" rows="6" placeholder="Leave any message if you have" required></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

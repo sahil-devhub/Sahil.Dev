@@ -1,0 +1,1018 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌟 Header */
+.header {
+    background-color: #0c0707;
+    padding: 15px 5%;
+}
+
+/* 🌟 Navigation Bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    padding-right: 40px; /* Added space to prevent overlap */
+}
+
+/* 🌟 Portfolio Title */
+#portfollio {
+    color: rgb(23, 116, 6);
+    font-size: 2.5rem;
+    font-family: cursive;
+    flex-grow: 1; /* Allows it to take available space */
+    text-align: left; /* Align to the left */
+}
+
+/* 🌟 Navbar */
+.navvar {
+    display: flex;
+    gap: 20px;
+}
+
+/* Navbar Links */
+.header_hyper {
+    text-decoration: none;
+    color: green;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.header_hyper:hover {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 🌟 Toggle Button */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    font-size: 1.5rem; /* Smaller size */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%); /* Aligns it vertically */
+}
+
+/* 🌟 Mobile Navbar */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button */
+    }
+
+    .navvar {
+        display: none; /* Hide navbar initially */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #222;
+        border-radius: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px; /* Adjust width */
+    }
+
+    .navvar a {
+        display: block;
+        padding: 12px;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .navvar.show {
+        display: flex; /* Show navbar when clicked */
+        animation: slideIn 0.3s ease-in-out;
+    }
+}
+
+/* 🌟 Smooth Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Intro Section */
+.front_view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #0c0707;
+    padding: 50px 5%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* ✅ Fix: Centers everything vertically */
+    gap: 30px;
+}
+
+/* Profile Image */
+.print {
+    height: 360px;
+    width: 350px;
+    border: 5px solid rgb(23, 116, 6);
+    border-radius: 50%;
+    background-image: url(myprint.jpg);
+    background-size: cover;
+}
+
+/* Welcome Text Box */
+.paragraph {
+    color: aliceblue;
+    font-size: 2rem;
+    background-color: rgb(37, 37, 37);
+    border: 2px solid rgb(23, 116, 6);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;  /* ✅ Fix: Ensures it doesn’t stretch too wide */
+    text-align: center; /* ✅ Fix: Centers text properly */
+    margin: auto; /* ✅ Fix: Ensures perfect centering */
+}
+
+/* "Know More" Button */
+#know_more {
+    height: 60px;
+    width: 150px;
+    font-size: 1.2rem;
+    background-color: rgb(23, 116, 6);
+    border: 3px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#know_more:hover {
+    background-color: white;
+    color: rgb(23, 116, 6);
+    border: 3px solid rgb(23, 116, 6);
+}
+
+/* 🌟 Mobile & Tablet Optimization */
+@media (max-width: 1024px) { /* Tablets */
+    .paragraph {
+        font-size: 1.8rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile Screens */
+    .intro {
+        flex-direction: column; /* ✅ Fix: Stacks elements vertically */
+        align-items: center; /* ✅ Fix: Ensures full center alignment */
+        text-align: center;
+    }
+
+    .paragraph {
+        font-size: 1.5rem;
+        width: 90%;
+        padding: 15px;
+        margin: auto; /* ✅ Fix: Ensures full centering */
+    }
+
+    /* Adjust "Welcome to my Portfolio" text */
+    .paragraph b {
+        font-size: 40px !important;
+    }
+
+    .paragraph i {
+        font-size: 50px !important;
+    }
+
+    /* Reduce profile image size */
+    .print {
+        width: 250px;
+        height: 250px;
+        margin: auto; /* ✅ Fix: Centers the image */
+    }
+
+    /* Reduce "Know More" button size */
+    #know_more {
+        height: 50px;
+        width: 130px;
+        font-size: 1rem;
+    }
+}
+
+
+/* About Section */
+.about_print {
+    height: 360px;
+    width: 350px;
+    border: 10px solid rgb(23, 116, 6);
+    border-radius: 50%;
+    margin-top: 50px;
+    background-image: url(myprint.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.about_print:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(23, 116, 6, 0.7);
+}
+
+.about_heading {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 55px; /* Adjusted to fit both screens */
+    color: rgb(23, 116, 6);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+/* Adjust text container for better responsiveness */
+#myself {
+    width: 70%; /* Balances between mobile and laptop */
+    max-width: 650px; /* Prevents text from getting too wide */
+    font-size: 20px; /* Perfect readability */
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Styling for section titles */
+.section_title {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(23, 116, 6);
+}
+
+.highlight_link {
+    text-decoration: none;
+    color: rgb(0, 102, 255);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.highlight_link:hover {
+    color: rgb(255, 102, 0);
+    text-decoration: underline;
+}
+
+.highlight_text {
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+
+#skills_button {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(23, 116, 6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#skills_button:hover {
+    background-color: rgb(18, 90, 5);
+    transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile & Laptop Optimization  */
+@media (max-width: 1024px) { /* Tablet & small laptop screens */
+    #myself {
+        width: 85%; /* Slightly wider */
+        font-size: 19px; /* Adjusted */
+    }
+
+    .about_heading {
+        font-size: 50px; /* Smaller for tablets */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile Screens */
+    #myself {
+        width: 90%; /* More width for text */
+        font-size: 18px; /* Smaller font for readability */
+    }
+
+    .about_heading {
+        font-size: 45px;
+    }
+
+    .about_print {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+/* Work Experience & Intern Section */
+#intern {
+    background-color: #0c0707;
+    border: 2px solid #0c0707;
+    border-radius: 15px;
+}
+
+/* 🌟 Heading (Larger for Laptop, Smaller for Mobile) */
+/* 🌟 Heading (Laptop Default) */
+.intern_heading {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 70px; /* Laptop view remains the same */
+    color: rgb(23, 116, 6);
+}
+
+/* 📌 Responsive Heading */
+@media (max-width: 768px) { /* Mobile */
+    .intern_heading {
+        font-size: 42px; /* Slightly bigger for better visibility */
+    }
+}
+
+@media (max-width: 480px) { /* Small Mobile */
+    .intern_heading {
+        font-size: 36px; /* A bit smaller but still readable */
+    }
+}
+
+
+/* 🌟 Work Experience List */
+.intern_list {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    opacity: 0; /* Initially hidden */
+}
+
+.intern_list li {
+    margin: 15px 0;
+    font-weight: bold;
+    padding: 15px;
+    background: linear-gradient(90deg, rgba(23,116,6,1) 0%, rgba(34,193,195,1) 100%);
+    border-radius: 10px;
+    display: inline-block;
+    width: 60%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px); /* Starts slightly lower */
+}
+
+/* Hover Effect */
+.intern_list li:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(34, 193, 195, 0.8);
+}
+
+/* Activated when scrolled into view */
+.intern_list.visible {
+    opacity: 1;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.intern_list.visible li {
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+/* Staggered animation delay */
+.intern_list.visible li:nth-child(1) { animation-delay: 0.2s; }
+.intern_list.visible li:nth-child(2) { animation-delay: 0.4s; }
+.intern_list.visible li:nth-child(3) { animation-delay: 0.6s; }
+.intern_list.visible li:nth-child(4) { animation-delay: 0.8s; }
+
+/* Keyframes for Smooth Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Skill Section */
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.skills_heading {
+    font-size: 50px; /* Default for laptops */
+    color: rgb(23, 116, 6);
+    text-decoration: underline;
+    margin-bottom: 30px;
+    animation: glowText 2s infinite alternate;
+}
+
+/* 🔹 Tablet View */
+@media (max-width: 768px) {
+    .skills_heading {
+        font-size: 48px !important; /* Slightly bigger */
+    }
+}
+
+/* 🔹 Mobile View */
+@media (max-width: 480px) {
+    .skills_heading {
+        font-size: 45px !important; /* Just a bit more */
+    }
+}
+
+
+.all_skills {
+    width: 95%;
+    max-width: 1600px;
+    background-color: #252525;
+    margin: auto;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box1, .box2 {
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 40px;
+    background: linear-gradient(135deg, #6a0dad, #9b30ff);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    animation: slideIn 1s ease-in-out;
+    border: 3px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+.box1:hover, .box2:hover {
+    transform: translateY(-12px) scale(1.07);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.box1::before, .box2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.box1:hover::before, .box2:hover::before {
+    transform: scale(1);
+}
+
+.box2 {
+    background: linear-gradient(135deg, #15803d, #32cd32);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 5px #2fff00;
+    }
+    100% {
+        text-shadow: 0 0 20px #2fff00;
+    }
+}
+
+.skill_title {
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.skill_list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.skill_list li {
+    margin: 12px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill_list li:hover {
+    transform: scale(1.1);
+    color: yellow;
+}
+
+@media (max-width: 1024px) {
+    .skills_heading {
+        font-size: 40px;
+    }
+    
+    .box1, .box2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills_heading {
+        font-size: 35px;
+    }
+    
+    .all_skills {
+        padding: 20px;
+    }
+    
+    .box1, .box2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills_heading {
+        font-size: 30px;
+    }
+}
+
+
+/* PROJECT SECTION */
+#project {
+    background-color: #0c0707;
+    border: 2px solid #0c0707;
+    border-radius: 15px;
+    padding-bottom: 20px;
+}
+
+/* 📌 Project Section Heading */
+.myproject {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 70px; /* Laptop Default */
+    color: rgb(23, 116, 6);
+}
+
+/* 📌 Adjusted Heading for Mobile */
+@media (max-width: 768px) {
+    .myproject {
+        font-size: 45px; /* Slightly bigger than before */
+    }
+}
+
+@media (max-width: 480px) {
+    .myproject {
+        font-size: 38px; /* For small mobile screens */
+    }
+}
+
+
+/* 📌 CONTAINER SETTINGS */
+.project_container {
+    width: 90%;
+    margin: auto;
+    border: 7px solid black;
+    border-radius: 25px;
+    background-color: rgb(8, 145, 8); 
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 📌 GRID FOR PROJECT BOXES */
+.achievement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts dynamically */
+    gap: 20px;
+    padding: 2%;
+    justify-content: center;
+    list-style-type: none;
+}
+
+/* 📌 PROJECT BOXES */
+.achievement_box {
+    max-width: 350px;
+    min-width: 250px;
+    height: auto;
+    min-height: 100px;
+    padding: 25px;
+    font-size: 18px;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* 📌 UNIQUE COLORS */
+.achievement_box:nth-child(1) { background: linear-gradient(45deg, #ffcc00, #ff9900); } /* Gold */
+.achievement_box:nth-child(2) { background: linear-gradient(45deg, #ff4b4b, #c70039); } /* Red */
+.achievement_box:nth-child(3) { background: linear-gradient(45deg, #4caf50, #2e7d32); } /* Green */
+.achievement_box:nth-child(4) { background: linear-gradient(45deg, #ff6f61, #d84315); } /* Coral */
+.achievement_box:nth-child(5) { background: linear-gradient(45deg, #42a5f5, #1e88e5); } /* Blue */
+.achievement_box:nth-child(6) { background: linear-gradient(45deg, #ff9800, #f57c00); } /* Orange */
+
+/* 📌 HOVER EFFECT */
+.achievement_box:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* 📌 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .achievement-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .achievement-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 Column */
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center boxes */
+    }
+
+    .achievement_box {
+        min-width: 90%;
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+/* 📌 MOBILE VIEW - CENTER BOXES & CHANGE COLORS */
+@media (max-width: 480px) {
+    .achievement-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center boxes */
+    }
+
+    .achievement_box {
+        min-width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .achievement_box p {
+        font-size: 12px;
+    }
+
+    /* NEW COLORS FOR MOBILE */
+    .achievement_box:nth-child(1) { background: linear-gradient(45deg, #ff7eb3, #ff758c); } /* Soft Pink */
+    .achievement_box:nth-child(2) { background: linear-gradient(45deg, #6a11cb, #2575fc); } /* Purple-Blue */
+    .achievement_box:nth-child(3) { background: linear-gradient(45deg, #00c6ff, #0072ff); } /* Aqua Blue */
+    .achievement_box:nth-child(4) { background: linear-gradient(45deg, #f7971e, #ffd200); } /* Gold */
+    .achievement_box:nth-child(5) { background: linear-gradient(45deg, #ff512f, #dd2476); } /* Sunset Red */
+    .achievement_box:nth-child(6) { background: linear-gradient(45deg, #24c6dc, #514a9d); } /* Teal-Purple */
+}
+
+
+/* .achievement section */
+.myachievement{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 70px;
+    color: rgb(23, 116, 6);
+}
+
+.achievement_container{
+    height: 100%;
+    width: 90%;
+    margin-left: 5%;
+    border: 7px solid black;
+    border-radius: 25px;
+    background-color: rgb(8, 145, 8);
+}
+
+.achievement_box{
+    height: fit-content; 
+    width: 25%; 
+    border: 2px solid black; 
+    border-radius: 5px;
+    margin-left: 5%;
+    padding: 15px;
+    text-align: center;
+    align-content: center;
+}
+.achievement_box:hover{
+    background-color: #f0f1f3;
+    height: 50px;
+}
+
+/* contact setion */
+.contact{
+    background-color: #0c0707;
+    border: 2px solid #0c0707;
+    border-radius: 15px;
+    padding-bottom: 20px;
+}
+
+
+/* Responsive Certifications Section */
+.certifications {
+    background: linear-gradient(to right, #ffffff, #f8f8f8);
+    border-radius: 15px;
+    text-align: center;
+    padding: 3% 5%;
+}
+
+/* Heading */
+.certifications-heading {
+    text-decoration: underline;
+    font-size: 50px;
+    color: rgb(23, 116, 6);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Responsive Grid Layout */
+.certifications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusts automatically */
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Flip Card Effect */
+.certification-card {
+    perspective: 1200px;
+    width: 100%;
+    max-width: 370px;
+    height: 160px;
+    border-radius: 12px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out, opacity 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(30px) rotateY(180deg);
+    margin: 0 auto;
+}
+
+/* Inner Content */
+.certification-card .certification-content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transition: background 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+/* Hover & Glow Effect */
+.certification-card:hover {
+    transform: scale(1.05) rotateY(0deg);
+}
+
+.certification-card:hover .certification-content {
+    background: linear-gradient(135deg, #38ef7d, #11998e);
+    color: white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Scroll Animation */
+.certification-card.show {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .certifications-heading {
+        font-size: 38px !important; /* Slightly reduced */
+    }
+
+    .certifications-list {
+        grid-template-columns: 1fr; /* Single column on small screens */
+        gap: 15px;
+    }
+
+    .certification-card {
+        width: 90%;
+        max-width: 330px;
+        height: 140px;
+    }
+
+    .certification-card .certification-content {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certifications-heading {
+        font-size: 36px !important; /* Slightly smaller for mobile */
+    }
+}
+
+/* Contact Section */
+.contact {
+    background-color: black;
+    padding-bottom: 40px;
+}
+
+.mycontact {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 70px;
+    color: rgb(23, 116, 6);
+}
+
+.contact_box {
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+/* 📌 Input & Textarea Styling */
+.contact_box input,
+.contact_box textarea {
+    width: 90%;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+/* 📌 Button Styling */
+.contact_box button {
+    background-color: green;
+    color: white;
+    width: 50%;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contact_box button:hover {
+    background-color: darkgreen;
+}
+
+/* 📌 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .mycontact {
+        font-size: 45px; /* Reduce title size */
+    }
+
+    .contact_box {
+        width: 85%; /* Slightly smaller */
+        padding: 12px;
+    }
+
+    .contact_box input,
+    .contact_box textarea {
+        font-size: 13px; /* Reduce input font size */
+        padding: 7px;
+    }
+
+    .contact_box button {
+        width: 55%;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mycontact {
+        font-size: 35px; /* Further reduce title size */
+    }
+
+    .contact_box {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .contact_box input,
+    .contact_box textarea {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .contact_box button {
+        width: 60%;
+        height: 30px;
+        font-size: 14px;
+    }
+}
